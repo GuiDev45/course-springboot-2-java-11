@@ -10,14 +10,17 @@ public enum OrderStatus {
 	
 	private int code;
 	
+	//Contrutor no enums é especial, ele vai ser private
 	private OrderStatus(int code) {
 		this.code = code;
 	}
 	
+	//Esse método público é para dar acesso ao exterior
 	public int getCode() {
 		return code;
 	}
 	
+	//Método estático para converter valor numérico para o tipo enumerado
 	public static OrderStatus valueOf(int code) {
 		for (OrderStatus value : OrderStatus.values()) {
 			if (value .getCode() == code) {
